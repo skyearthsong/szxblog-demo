@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue3 composition API尝试 | szx的前端博客</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="专注前端">
+    
+    <link rel="preload" href="/szxblog-demo/assets/css/0.styles.bb1aa129.css" as="style"><link rel="preload" href="/szxblog-demo/assets/js/app.e2c00437.js" as="script"><link rel="preload" href="/szxblog-demo/assets/js/2.8f1423a4.js" as="script"><link rel="preload" href="/szxblog-demo/assets/js/134.f81e482f.js" as="script"><link rel="prefetch" href="/szxblog-demo/assets/js/10.f16ead29.js"><link rel="prefetch" href="/szxblog-demo/assets/js/100.8cadd01d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/101.a4878c9d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/102.991e43a1.js"><link rel="prefetch" href="/szxblog-demo/assets/js/103.7d14ce32.js"><link rel="prefetch" href="/szxblog-demo/assets/js/104.d890ed53.js"><link rel="prefetch" href="/szxblog-demo/assets/js/105.bcd4ee5b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/106.4518dab2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/107.db11e77b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/108.cc1b835b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/109.79708b6d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/11.b2e33f60.js"><link rel="prefetch" href="/szxblog-demo/assets/js/110.fe6a2f06.js"><link rel="prefetch" href="/szxblog-demo/assets/js/111.d68806ae.js"><link rel="prefetch" href="/szxblog-demo/assets/js/112.0ac71cc1.js"><link rel="prefetch" href="/szxblog-demo/assets/js/113.4a09aadd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/114.963a5822.js"><link rel="prefetch" href="/szxblog-demo/assets/js/115.1aad30ca.js"><link rel="prefetch" href="/szxblog-demo/assets/js/116.12dfadff.js"><link rel="prefetch" href="/szxblog-demo/assets/js/117.dd997115.js"><link rel="prefetch" href="/szxblog-demo/assets/js/118.4f5c2734.js"><link rel="prefetch" href="/szxblog-demo/assets/js/119.5e4017d2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/12.39e4e465.js"><link rel="prefetch" href="/szxblog-demo/assets/js/120.1d59b549.js"><link rel="prefetch" href="/szxblog-demo/assets/js/121.46cb657a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/122.ebd8bc25.js"><link rel="prefetch" href="/szxblog-demo/assets/js/123.e3995884.js"><link rel="prefetch" href="/szxblog-demo/assets/js/124.843940bf.js"><link rel="prefetch" href="/szxblog-demo/assets/js/125.e05870f4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/126.d37e314f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/127.144f4e65.js"><link rel="prefetch" href="/szxblog-demo/assets/js/128.317156a7.js"><link rel="prefetch" href="/szxblog-demo/assets/js/129.e6323ab6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/13.4a7ec971.js"><link rel="prefetch" href="/szxblog-demo/assets/js/130.9fad7606.js"><link rel="prefetch" href="/szxblog-demo/assets/js/131.b0cb52b7.js"><link rel="prefetch" href="/szxblog-demo/assets/js/132.5f4869e4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/133.f759d537.js"><link rel="prefetch" href="/szxblog-demo/assets/js/135.8b76bf3a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/136.ec7497a6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/137.1c138540.js"><link rel="prefetch" href="/szxblog-demo/assets/js/138.757a6d32.js"><link rel="prefetch" href="/szxblog-demo/assets/js/139.b64fe6dd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/14.9bc2db88.js"><link rel="prefetch" href="/szxblog-demo/assets/js/140.8e37e5b2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/141.b5039787.js"><link rel="prefetch" href="/szxblog-demo/assets/js/142.77101e82.js"><link rel="prefetch" href="/szxblog-demo/assets/js/143.ff805ccd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/144.4ad37531.js"><link rel="prefetch" href="/szxblog-demo/assets/js/145.304b1b9e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/146.4600c2a5.js"><link rel="prefetch" href="/szxblog-demo/assets/js/147.a36d58c2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/148.6889700a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/149.105878b7.js"><link rel="prefetch" href="/szxblog-demo/assets/js/15.4d9798a0.js"><link rel="prefetch" href="/szxblog-demo/assets/js/150.cf5bfd3f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/151.86e5595c.js"><link rel="prefetch" href="/szxblog-demo/assets/js/152.3c259509.js"><link rel="prefetch" href="/szxblog-demo/assets/js/153.499607de.js"><link rel="prefetch" href="/szxblog-demo/assets/js/154.90874a75.js"><link rel="prefetch" href="/szxblog-demo/assets/js/155.4cd7b50f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/156.6acd428c.js"><link rel="prefetch" href="/szxblog-demo/assets/js/16.def8c8a5.js"><link rel="prefetch" href="/szxblog-demo/assets/js/17.14956b0e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/18.b6609ccd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/19.3f2404b2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/20.904beb92.js"><link rel="prefetch" href="/szxblog-demo/assets/js/21.aeee3703.js"><link rel="prefetch" href="/szxblog-demo/assets/js/22.fe438878.js"><link rel="prefetch" href="/szxblog-demo/assets/js/23.d8da336b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/24.250498f2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/25.22a76a93.js"><link rel="prefetch" href="/szxblog-demo/assets/js/26.d08fabd4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/27.a5b15e7c.js"><link rel="prefetch" href="/szxblog-demo/assets/js/28.d047c227.js"><link rel="prefetch" href="/szxblog-demo/assets/js/29.e067aba3.js"><link rel="prefetch" href="/szxblog-demo/assets/js/3.4a4dea6a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/30.a4cb4a9a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/31.9cc73361.js"><link rel="prefetch" href="/szxblog-demo/assets/js/32.1551ca83.js"><link rel="prefetch" href="/szxblog-demo/assets/js/33.2f9aa824.js"><link rel="prefetch" href="/szxblog-demo/assets/js/34.62952cfb.js"><link rel="prefetch" href="/szxblog-demo/assets/js/35.dad7516d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/36.bf7157c4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/37.304a1cd2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/38.6490f3d9.js"><link rel="prefetch" href="/szxblog-demo/assets/js/39.08e18c05.js"><link rel="prefetch" href="/szxblog-demo/assets/js/4.0b45e3e3.js"><link rel="prefetch" href="/szxblog-demo/assets/js/40.091f41cc.js"><link rel="prefetch" href="/szxblog-demo/assets/js/41.553cae9a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/42.e5a8f335.js"><link rel="prefetch" href="/szxblog-demo/assets/js/43.8a1233c4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/44.d66aa0af.js"><link rel="prefetch" href="/szxblog-demo/assets/js/45.4ec2ac39.js"><link rel="prefetch" href="/szxblog-demo/assets/js/46.6de0879e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/47.192a18b2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/48.6ab2ae0b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/49.3e7963e6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/5.033e198f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/50.a0a03c35.js"><link rel="prefetch" href="/szxblog-demo/assets/js/51.0d2cbfe9.js"><link rel="prefetch" href="/szxblog-demo/assets/js/52.15164a8d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/53.34bd92b6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/54.aab05585.js"><link rel="prefetch" href="/szxblog-demo/assets/js/55.ecba2087.js"><link rel="prefetch" href="/szxblog-demo/assets/js/56.3c2504c8.js"><link rel="prefetch" href="/szxblog-demo/assets/js/57.802af9b6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/58.c475375a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/59.31a836d2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/6.243d2d74.js"><link rel="prefetch" href="/szxblog-demo/assets/js/60.8a892df5.js"><link rel="prefetch" href="/szxblog-demo/assets/js/61.c2bde899.js"><link rel="prefetch" href="/szxblog-demo/assets/js/62.687e89b4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/63.526d56d4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/64.90076339.js"><link rel="prefetch" href="/szxblog-demo/assets/js/65.48a56802.js"><link rel="prefetch" href="/szxblog-demo/assets/js/66.f5339f49.js"><link rel="prefetch" href="/szxblog-demo/assets/js/67.63db5c44.js"><link rel="prefetch" href="/szxblog-demo/assets/js/68.436134dd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/69.7c87a09b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/7.c1c64325.js"><link rel="prefetch" href="/szxblog-demo/assets/js/70.f77a5e7f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/71.21dc29e2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/72.87cf2239.js"><link rel="prefetch" href="/szxblog-demo/assets/js/73.4cea3242.js"><link rel="prefetch" href="/szxblog-demo/assets/js/74.32b5d7d2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/75.b1ed8ded.js"><link rel="prefetch" href="/szxblog-demo/assets/js/76.81b226bc.js"><link rel="prefetch" href="/szxblog-demo/assets/js/77.ed4d0c4e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/78.90521550.js"><link rel="prefetch" href="/szxblog-demo/assets/js/79.1664cd3f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/8.f59080dd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/80.4792b8a8.js"><link rel="prefetch" href="/szxblog-demo/assets/js/81.96f7a53e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/82.763974fd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/83.48bb4590.js"><link rel="prefetch" href="/szxblog-demo/assets/js/84.3b365bc6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/85.705ddf29.js"><link rel="prefetch" href="/szxblog-demo/assets/js/86.7d8aeacf.js"><link rel="prefetch" href="/szxblog-demo/assets/js/87.4086e29b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/88.8a8c76de.js"><link rel="prefetch" href="/szxblog-demo/assets/js/89.f9dc7fd3.js"><link rel="prefetch" href="/szxblog-demo/assets/js/9.d75d0d70.js"><link rel="prefetch" href="/szxblog-demo/assets/js/90.b4a00719.js"><link rel="prefetch" href="/szxblog-demo/assets/js/91.852f9720.js"><link rel="prefetch" href="/szxblog-demo/assets/js/92.83f5a96e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/93.c6bfc105.js"><link rel="prefetch" href="/szxblog-demo/assets/js/94.581e0e89.js"><link rel="prefetch" href="/szxblog-demo/assets/js/95.9fb6788d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/96.e78a3c64.js"><link rel="prefetch" href="/szxblog-demo/assets/js/97.9a67fc48.js"><link rel="prefetch" href="/szxblog-demo/assets/js/98.46f07266.js"><link rel="prefetch" href="/szxblog-demo/assets/js/99.87034f0f.js">
+    <link rel="stylesheet" href="/szxblog-demo/assets/css/0.styles.bb1aa129.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/szxblog-demo/" class="home-link router-link-active"><!----> <span class="site-name">szx的前端博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端日报" class="dropdown-title"><span class="title">前端日报</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端日报" class="mobile-dropdown-title"><span class="title">前端日报</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/szxblog-demo/dailyFrontReport/2020/06/" class="nav-link">
+  202006
+</a></li><li class="dropdown-item"><!----> <a href="/szxblog-demo/dailyFrontReport/2020/07/" class="nav-link">
+  202007
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分类" class="dropdown-title"><span class="title">技术分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分类" class="mobile-dropdown-title"><span class="title">技术分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/szxblog-demo/tech/js/" class="nav-link router-link-active">
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/szxblog-demo/tech/css/" class="nav-link">
+  css
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用站点" class="dropdown-title"><span class="title">常用站点</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用站点" class="mobile-dropdown-title"><span class="title">常用站点</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://wubaiqing.github.io/zaobao/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  每日时报
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术趋势
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端日报" class="dropdown-title"><span class="title">前端日报</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端日报" class="mobile-dropdown-title"><span class="title">前端日报</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/szxblog-demo/dailyFrontReport/2020/06/" class="nav-link">
+  202006
+</a></li><li class="dropdown-item"><!----> <a href="/szxblog-demo/dailyFrontReport/2020/07/" class="nav-link">
+  202007
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分类" class="dropdown-title"><span class="title">技术分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分类" class="mobile-dropdown-title"><span class="title">技术分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/szxblog-demo/tech/js/" class="nav-link router-link-active">
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/szxblog-demo/tech/css/" class="nav-link">
+  css
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用站点" class="dropdown-title"><span class="title">常用站点</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用站点" class="mobile-dropdown-title"><span class="title">常用站点</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://wubaiqing.github.io/zaobao/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  每日时报
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术趋势
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>vue3 composition API尝试</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/szxblog-demo/tech/js/vue/vue3composition-api%E5%B0%9D%E8%AF%95.html#什么是composition-api" class="sidebar-link">什么是composition API</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/szxblog-demo/tech/js/vue/vue3composition-api%E5%B0%9D%E8%AF%95.html#composition-api主要内容" class="sidebar-link">composition API主要内容</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/szxblog-demo/tech/js/vue/vue3composition-api%E5%B0%9D%E8%AF%95.html#setup函数" class="sidebar-link">setup函数</a></li><li class="sidebar-sub-header"><a href="/szxblog-demo/tech/js/vue/vue3composition-api%E5%B0%9D%E8%AF%95.html#响应式api" class="sidebar-link">响应式API</a></li><li class="sidebar-sub-header"><a href="/szxblog-demo/tech/js/vue/vue3composition-api%E5%B0%9D%E8%AF%95.html#生命周期钩子函数" class="sidebar-link">生命周期钩子函数</a></li><li class="sidebar-sub-header"><a href="/szxblog-demo/tech/js/vue/vue3composition-api%E5%B0%9D%E8%AF%95.html#依赖注入" class="sidebar-link">依赖注入</a></li></ul></li><li><a href="/szxblog-demo/tech/js/vue/vue3composition-api%E5%B0%9D%E8%AF%95.html#操作步骤" class="sidebar-link">操作步骤</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue3-composition-api尝试"><a href="#vue3-composition-api尝试" class="header-anchor">#</a> vue3 composition API尝试</h1> <ul><li><a href="https://www.cnblogs.com/liulongbinblogs/p/11649393.html" target="_blank" rel="noopener noreferrer">vue3 composition api介绍<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <h2 id="什么是composition-api"><a href="#什么是composition-api" class="header-anchor">#</a> 什么是composition API</h2> <p>组合式API。相对而言我们在Vue2中使用的叫Options API，也即配置型API，我们的代码通过Vue给定的options，将代码写入到各个options中。比如mountd是虚拟dom装载完成之后的钩子，因此在SSR的服务端这个钩子不会执行。然后我们的data定义必须放到data中，计算属性则需要放在computed，以及methods等不同的options。</p> <p>使用Option API的好处，我个人而言，觉得这个最大的好处就是降低了门槛，也就是说：因为你必须按照给定的option来组织你的代码，即使你的代码写的真的挺乱，但是因为有这个Options在，所以别人阅读你的代码还是有章可循的，知道从哪里开始，对应的方法应该去哪里找，也就是说提升了你的下限。既然提到了好处，自然要说下缺点。缺点就是因为功能点的分散。</p> <p>比如我要想在created里面去拉取数据，然后进行渲染，我们可能得在method里定义两个方法，一个是拉取数据，一个是渲染数据。</p> <p>然后我们要在created里面调用method里的方法A，在方法A里面我们去调用拉取数据的方法，然后再调用渲染数据的方法，因此会导致我们原本应该是写在一起的一个业务逻辑的代码要被分散到各处。当然这个主要是针对一些对性能或是代码架构有高要求的场景。一般的情况下确实并不需要这个。不过既然有场景，那也还是要能满足，因此Vue3推出了Composition API，通过setup方法来实现，我们可以看到官方文档对这个的定义：一组低侵入式的、函数式的 API，使得我们能够更灵活地「组合」组件的逻辑。而且这个对于Vue3来说是可选的，也就是说如果你不想用组合式API，那么你仍然可以继续使用Vue2的OptionAPI。</p> <p>具体的相关API的文档可以参考Composition API</p> <p>对于一些统一的这种业务逻辑代码，原来可能每个组件内都需要去写，而组件的重用并不是那么容易实现。不过通过组合式API，则可以将很多公共逻辑抽象为公共方法，然后就可以很好的复用了.</p> <p>但是组合式API也有缺点，他的缺点就是因为太自由了，所以对于水品没那么高的同学来说，很可能写的代码就能了一团乱麻，也就是所谓的面条代码。因此组合式API虽然可以提高上限，但是下限也低了。</p> <h2 id="composition-api主要内容"><a href="#composition-api主要内容" class="header-anchor">#</a> composition API主要内容</h2> <h3 id="setup函数"><a href="#setup函数" class="header-anchor">#</a> setup函数</h3> <p>setup 函数是一个新的组件选项。作为在组件内使用 Composition API 的入口点。创建组件实例，然后初始化 props ，紧接着就调用setup 函数。</p> <ul><li>setup函数生命周期
+从生命周期钩子的视角来看，它会在 beforeCreate 钩子之前被调用，如果 setup 返回一个对象，则对象的属性将会被合并到组件模板的渲染上下文。</li> <li>setup的返回类型
+setup函数可以返回变量，也可以返回函数，</li> <li>setup的参数
+第一个参数props
+第二个参数context，获取this中的部分内容attrs、slots、emit</li> <li>setup的参数类型定义</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>interface Data {
+  [key: string]: unknown
+}
+
+interface SetupContext {
+  attrs: Data
+  slots: Slots
+  emit: (event: string, ...args: unknown[]) =&gt; void
+}
+
+function setup(props: Data, context: SetupContext): Data
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="响应式api"><a href="#响应式api" class="header-anchor">#</a> 响应式API</h3> <ul><li>reactive
+接收一个普通对象然后返回该普通对象的响应式代理。响应式转换是“深层的”：会影响对象内部所有嵌套的属性。基于 ES2015 的 Proxy 实现，返回的代理对象不等于原始对象。建议仅使用代理对象而避免依赖原始对象。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>const obj = reactive({ count: 0 })
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>ref
+接受一个参数值并返回一个响应式且可改变的 ref 对象。ref 对象拥有一个指向内部值的单一属性 .value。如果传入 ref 的是一个对象，将调用 reactive 方法进行深层响应转换。
+当 ref 作为渲染上下文的属性返回（即在setup() 返回的对象中）并在模板中使用时，它会自动解套，无需在模板内额外书写 .value：
+当 ref 作为 reactive 对象的 property 被访问或修改时，也将自动解套 value 值，其行为类似普通属性,从 Array 或者 Map 等原生集合类中访问 ref 时，不会自动解套
+注意如果将一个新的 ref 分配给现有的 ref， 将替换旧的 ref：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>const count = ref(0)
+console.log(count.value) // 0
+
+count.value++
+console.log(count.value) // 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>computed
+传入一个 getter 函数，返回一个默认不可手动修改的 ref 对象。或者传入一个拥有 get 和 set 函数的对象，创建一个可手动修改的计算状态。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>const count = ref(1)
+const plusOne = computed(() =&gt; count.value + 1)
+
+console.log(plusOne.value) // 2
+
+plusOne.value++ // 错误！
+const count = ref(1)
+const plusOne = computed({
+  get: () =&gt; count.value + 1,
+  set: (val) =&gt; {
+    count.value = val - 1
+  },
+})
+
+plusOne.value = 1
+console.log(count.value) // 0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><ul><li>watchEffect
+立即执行传入的一个函数，并响应式追踪其依赖，并在其依赖变更时重新运行该函数。
+当 watchEffect 在组件的 setup() 函数或生命周期钩子被调用时， 侦听器会被链接到该组件的生命周期，并在组件卸载时自动停止。也可以显式调用返回值以停止侦听。
+有时副作用函数会执行一些异步的副作用, 这些响应需要在其失效时清除（即完成之前状态已改变了）。所以侦听副作用传入的函数可以接收一个 onInvalidate 函数作入参, 用来注册清理失效时的回调。当以下情况发生时，这个失效回调会被触发:</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>const count = ref(0)
+
+watchEffect(() =&gt; console.log(count.value))
+// -&gt; 打印出 0
+
+setTimeout(() =&gt; {
+  count.value++
+  // -&gt; 打印出 1
+}, 100)
+
+const stop = watchEffect(() =&gt; {
+  /* ... */
+})
+
+// 之后
+stop()
+
+watchEffect((onInvalidate) =&gt; {
+  const token = performAsyncOperation(id.value)
+  onInvalidate(() =&gt; {
+    // id 改变时 或 停止侦听时
+    // 取消之前的异步操作
+    token.cancel()
+  })
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><ul><li>watch
+watch 需要侦听特定的数据源，并在回调函数中执行副作用。默认情况是懒执行的，也就是说仅在侦听的源变更时才执行回调。
+对比 watchEffect，watch 允许我们：懒执行副作用；更明确哪些状态的改变会触发侦听器重新运行副作用；访问侦听状态变化前后的值</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 侦听一个 getter
+const state = reactive({ count: 0 })
+watch(
+  () =&gt; state.count,
+  (count, prevCount) =&gt; {
+    /* ... */
+  }
+)
+
+// 直接侦听一个 ref
+const count = ref(0)
+watch(count, (count, prevCount) =&gt; {
+  /* ... */
+})
+watch([fooRef, barRef], ([foo, bar], [prevFoo, prevBar]) =&gt; {
+  /* ... */
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><ul><li>readonly
+传入一个对象（响应式或普通）或 ref，返回一个原始对象的只读代理。一个只读的代理是“深层的”，对象内部任何嵌套的属性也都是只读的。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>const original = reactive({ count: 0 })
+
+const copy = readonly(original)
+
+watchEffect(() =&gt; {
+  // 依赖追踪
+  console.log(copy.count)
+})
+
+// original 上的修改会触发 copy 上的侦听
+original.count++
+
+// 无法修改 copy 并会被警告
+copy.count++ // warning!
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="生命周期钩子函数"><a href="#生命周期钩子函数" class="header-anchor">#</a> 生命周期钩子函数</h3> <p>生命周期钩子注册函数只能在 setup() 期间同步使用， 因为它们依赖于内部的全局状态来定位当前组件实例（正在调用 setup() 的组件实例）, 不在当前组件下调用这些函数会抛出一个错误。</p> <p>组件实例上下文也是在生命周期钩子同步执行期间设置的，因此，在卸载组件时，在生命周期钩子内部同步创建的侦听器和计算状态也将自动删除。
+2.X生命周期对应关系
+beforeCreate -&gt; 使用 setup()
+created -&gt; 使用 setup()
+beforeMount -&gt; onBeforeMount
+mounted -&gt; onMounted
+beforeUpdate -&gt; onBeforeUpdate
+updated -&gt; onUpdated
+beforeDestroy -&gt; onBeforeUnmount
+destroyed -&gt; onUnmounted
+errorCaptured -&gt; onErrorCaptured
+新增生命周期
+onRenderTracked
+onRenderTriggered</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import { onMounted, onUpdated, onUnmounted } from 'vue'
+
+const MyComponent = {
+  setup() {
+    onMounted(() =&gt; {
+      console.log('mounted!')
+    })
+    onUpdated(() =&gt; {
+      console.log('updated!')
+    })
+    onUnmounted(() =&gt; {
+      console.log('unmounted!')
+    })
+  },
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="依赖注入"><a href="#依赖注入" class="header-anchor">#</a> 依赖注入</h3> <p>provide 和 inject 提供依赖注入，功能类似 2.x 的 provide/inject。两者都只能在当前活动组件实例的 setup() 中调用。
+inject 接受一个可选的的默认值作为第二个参数。如果未提供默认值，并且在 provide 上下文中未找到该属性，则 inject 返回 undefined。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import { provide, inject } from 'vue'
+
+const ThemeSymbol = Symbol()
+
+const Ancestor = {
+  setup() {
+    provide(ThemeSymbol, 'dark')
+  },
+}
+
+const Descendent = {
+  setup() {
+    const theme = inject(ThemeSymbol, 'light' /* optional default value */)
+    return {
+      theme,
+    }
+  },
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="操作步骤"><a href="#操作步骤" class="header-anchor">#</a> 操作步骤</h2> <ul><li>在vue3时，composition-api已经被包含在Vue中，所以直接进行引用(在vue2环境中需要npm install @vue/composition-api --save)</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 父组件中通过provide函数向子级组件共享数据（不限层级）
+import { provide } from 'vue'
+  setup() {
+    //    provide('要共享的数据名称', 被共享的数据)
+    provide('globalColor', 'yellow')
+  },
+  // 子组件中通过调用 inject 函数时，通过指定的数据名称，获取到父级共享的数据
+  &lt;template&gt;
+  &lt;div&gt;
+    &lt;!-- 通过属性绑定，为标签设置字体颜色 --&gt;
+    &lt;h5 :style=&quot;{color: themeColor}&quot;&gt;Level Two&lt;/h5&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+import { inject } from 'vue'
+  setup() {
+    //  inject('父组件共享的数据名称')
+    const themeColor = inject('globalColor')
+	
+    // 把接收到的共享数据 return 给 Template 使用
+    return {
+      themeColor
+    }
+  },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">11/17/2020, 9:33:55 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/szxblog-demo/assets/js/app.e2c00437.js" defer></script><script src="/szxblog-demo/assets/js/2.8f1423a4.js" defer></script><script src="/szxblog-demo/assets/js/134.f81e482f.js" defer></script>
+  </body>
+</html>

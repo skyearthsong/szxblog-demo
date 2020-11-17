@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>常用string处理 | szx的前端博客</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="专注前端">
+    
+    <link rel="preload" href="/szxblog-demo/assets/css/0.styles.bb1aa129.css" as="style"><link rel="preload" href="/szxblog-demo/assets/js/app.e2c00437.js" as="script"><link rel="preload" href="/szxblog-demo/assets/js/2.8f1423a4.js" as="script"><link rel="preload" href="/szxblog-demo/assets/js/121.46cb657a.js" as="script"><link rel="prefetch" href="/szxblog-demo/assets/js/10.f16ead29.js"><link rel="prefetch" href="/szxblog-demo/assets/js/100.8cadd01d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/101.a4878c9d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/102.991e43a1.js"><link rel="prefetch" href="/szxblog-demo/assets/js/103.7d14ce32.js"><link rel="prefetch" href="/szxblog-demo/assets/js/104.d890ed53.js"><link rel="prefetch" href="/szxblog-demo/assets/js/105.bcd4ee5b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/106.4518dab2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/107.db11e77b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/108.cc1b835b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/109.79708b6d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/11.b2e33f60.js"><link rel="prefetch" href="/szxblog-demo/assets/js/110.fe6a2f06.js"><link rel="prefetch" href="/szxblog-demo/assets/js/111.d68806ae.js"><link rel="prefetch" href="/szxblog-demo/assets/js/112.0ac71cc1.js"><link rel="prefetch" href="/szxblog-demo/assets/js/113.4a09aadd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/114.963a5822.js"><link rel="prefetch" href="/szxblog-demo/assets/js/115.1aad30ca.js"><link rel="prefetch" href="/szxblog-demo/assets/js/116.12dfadff.js"><link rel="prefetch" href="/szxblog-demo/assets/js/117.dd997115.js"><link rel="prefetch" href="/szxblog-demo/assets/js/118.4f5c2734.js"><link rel="prefetch" href="/szxblog-demo/assets/js/119.5e4017d2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/12.39e4e465.js"><link rel="prefetch" href="/szxblog-demo/assets/js/120.1d59b549.js"><link rel="prefetch" href="/szxblog-demo/assets/js/122.ebd8bc25.js"><link rel="prefetch" href="/szxblog-demo/assets/js/123.e3995884.js"><link rel="prefetch" href="/szxblog-demo/assets/js/124.843940bf.js"><link rel="prefetch" href="/szxblog-demo/assets/js/125.e05870f4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/126.d37e314f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/127.144f4e65.js"><link rel="prefetch" href="/szxblog-demo/assets/js/128.317156a7.js"><link rel="prefetch" href="/szxblog-demo/assets/js/129.e6323ab6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/13.4a7ec971.js"><link rel="prefetch" href="/szxblog-demo/assets/js/130.9fad7606.js"><link rel="prefetch" href="/szxblog-demo/assets/js/131.b0cb52b7.js"><link rel="prefetch" href="/szxblog-demo/assets/js/132.5f4869e4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/133.f759d537.js"><link rel="prefetch" href="/szxblog-demo/assets/js/134.f81e482f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/135.8b76bf3a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/136.ec7497a6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/137.1c138540.js"><link rel="prefetch" href="/szxblog-demo/assets/js/138.757a6d32.js"><link rel="prefetch" href="/szxblog-demo/assets/js/139.b64fe6dd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/14.9bc2db88.js"><link rel="prefetch" href="/szxblog-demo/assets/js/140.8e37e5b2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/141.b5039787.js"><link rel="prefetch" href="/szxblog-demo/assets/js/142.77101e82.js"><link rel="prefetch" href="/szxblog-demo/assets/js/143.ff805ccd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/144.4ad37531.js"><link rel="prefetch" href="/szxblog-demo/assets/js/145.304b1b9e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/146.4600c2a5.js"><link rel="prefetch" href="/szxblog-demo/assets/js/147.a36d58c2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/148.6889700a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/149.105878b7.js"><link rel="prefetch" href="/szxblog-demo/assets/js/15.4d9798a0.js"><link rel="prefetch" href="/szxblog-demo/assets/js/150.cf5bfd3f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/151.86e5595c.js"><link rel="prefetch" href="/szxblog-demo/assets/js/152.3c259509.js"><link rel="prefetch" href="/szxblog-demo/assets/js/153.499607de.js"><link rel="prefetch" href="/szxblog-demo/assets/js/154.90874a75.js"><link rel="prefetch" href="/szxblog-demo/assets/js/155.4cd7b50f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/156.6acd428c.js"><link rel="prefetch" href="/szxblog-demo/assets/js/16.def8c8a5.js"><link rel="prefetch" href="/szxblog-demo/assets/js/17.14956b0e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/18.b6609ccd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/19.3f2404b2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/20.904beb92.js"><link rel="prefetch" href="/szxblog-demo/assets/js/21.aeee3703.js"><link rel="prefetch" href="/szxblog-demo/assets/js/22.fe438878.js"><link rel="prefetch" href="/szxblog-demo/assets/js/23.d8da336b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/24.250498f2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/25.22a76a93.js"><link rel="prefetch" href="/szxblog-demo/assets/js/26.d08fabd4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/27.a5b15e7c.js"><link rel="prefetch" href="/szxblog-demo/assets/js/28.d047c227.js"><link rel="prefetch" href="/szxblog-demo/assets/js/29.e067aba3.js"><link rel="prefetch" href="/szxblog-demo/assets/js/3.4a4dea6a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/30.a4cb4a9a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/31.9cc73361.js"><link rel="prefetch" href="/szxblog-demo/assets/js/32.1551ca83.js"><link rel="prefetch" href="/szxblog-demo/assets/js/33.2f9aa824.js"><link rel="prefetch" href="/szxblog-demo/assets/js/34.62952cfb.js"><link rel="prefetch" href="/szxblog-demo/assets/js/35.dad7516d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/36.bf7157c4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/37.304a1cd2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/38.6490f3d9.js"><link rel="prefetch" href="/szxblog-demo/assets/js/39.08e18c05.js"><link rel="prefetch" href="/szxblog-demo/assets/js/4.0b45e3e3.js"><link rel="prefetch" href="/szxblog-demo/assets/js/40.091f41cc.js"><link rel="prefetch" href="/szxblog-demo/assets/js/41.553cae9a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/42.e5a8f335.js"><link rel="prefetch" href="/szxblog-demo/assets/js/43.8a1233c4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/44.d66aa0af.js"><link rel="prefetch" href="/szxblog-demo/assets/js/45.4ec2ac39.js"><link rel="prefetch" href="/szxblog-demo/assets/js/46.6de0879e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/47.192a18b2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/48.6ab2ae0b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/49.3e7963e6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/5.033e198f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/50.a0a03c35.js"><link rel="prefetch" href="/szxblog-demo/assets/js/51.0d2cbfe9.js"><link rel="prefetch" href="/szxblog-demo/assets/js/52.15164a8d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/53.34bd92b6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/54.aab05585.js"><link rel="prefetch" href="/szxblog-demo/assets/js/55.ecba2087.js"><link rel="prefetch" href="/szxblog-demo/assets/js/56.3c2504c8.js"><link rel="prefetch" href="/szxblog-demo/assets/js/57.802af9b6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/58.c475375a.js"><link rel="prefetch" href="/szxblog-demo/assets/js/59.31a836d2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/6.243d2d74.js"><link rel="prefetch" href="/szxblog-demo/assets/js/60.8a892df5.js"><link rel="prefetch" href="/szxblog-demo/assets/js/61.c2bde899.js"><link rel="prefetch" href="/szxblog-demo/assets/js/62.687e89b4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/63.526d56d4.js"><link rel="prefetch" href="/szxblog-demo/assets/js/64.90076339.js"><link rel="prefetch" href="/szxblog-demo/assets/js/65.48a56802.js"><link rel="prefetch" href="/szxblog-demo/assets/js/66.f5339f49.js"><link rel="prefetch" href="/szxblog-demo/assets/js/67.63db5c44.js"><link rel="prefetch" href="/szxblog-demo/assets/js/68.436134dd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/69.7c87a09b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/7.c1c64325.js"><link rel="prefetch" href="/szxblog-demo/assets/js/70.f77a5e7f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/71.21dc29e2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/72.87cf2239.js"><link rel="prefetch" href="/szxblog-demo/assets/js/73.4cea3242.js"><link rel="prefetch" href="/szxblog-demo/assets/js/74.32b5d7d2.js"><link rel="prefetch" href="/szxblog-demo/assets/js/75.b1ed8ded.js"><link rel="prefetch" href="/szxblog-demo/assets/js/76.81b226bc.js"><link rel="prefetch" href="/szxblog-demo/assets/js/77.ed4d0c4e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/78.90521550.js"><link rel="prefetch" href="/szxblog-demo/assets/js/79.1664cd3f.js"><link rel="prefetch" href="/szxblog-demo/assets/js/8.f59080dd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/80.4792b8a8.js"><link rel="prefetch" href="/szxblog-demo/assets/js/81.96f7a53e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/82.763974fd.js"><link rel="prefetch" href="/szxblog-demo/assets/js/83.48bb4590.js"><link rel="prefetch" href="/szxblog-demo/assets/js/84.3b365bc6.js"><link rel="prefetch" href="/szxblog-demo/assets/js/85.705ddf29.js"><link rel="prefetch" href="/szxblog-demo/assets/js/86.7d8aeacf.js"><link rel="prefetch" href="/szxblog-demo/assets/js/87.4086e29b.js"><link rel="prefetch" href="/szxblog-demo/assets/js/88.8a8c76de.js"><link rel="prefetch" href="/szxblog-demo/assets/js/89.f9dc7fd3.js"><link rel="prefetch" href="/szxblog-demo/assets/js/9.d75d0d70.js"><link rel="prefetch" href="/szxblog-demo/assets/js/90.b4a00719.js"><link rel="prefetch" href="/szxblog-demo/assets/js/91.852f9720.js"><link rel="prefetch" href="/szxblog-demo/assets/js/92.83f5a96e.js"><link rel="prefetch" href="/szxblog-demo/assets/js/93.c6bfc105.js"><link rel="prefetch" href="/szxblog-demo/assets/js/94.581e0e89.js"><link rel="prefetch" href="/szxblog-demo/assets/js/95.9fb6788d.js"><link rel="prefetch" href="/szxblog-demo/assets/js/96.e78a3c64.js"><link rel="prefetch" href="/szxblog-demo/assets/js/97.9a67fc48.js"><link rel="prefetch" href="/szxblog-demo/assets/js/98.46f07266.js"><link rel="prefetch" href="/szxblog-demo/assets/js/99.87034f0f.js">
+    <link rel="stylesheet" href="/szxblog-demo/assets/css/0.styles.bb1aa129.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/szxblog-demo/" class="home-link router-link-active"><!----> <span class="site-name">szx的前端博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端日报" class="dropdown-title"><span class="title">前端日报</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端日报" class="mobile-dropdown-title"><span class="title">前端日报</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/szxblog-demo/dailyFrontReport/2020/06/" class="nav-link">
+  202006
+</a></li><li class="dropdown-item"><!----> <a href="/szxblog-demo/dailyFrontReport/2020/07/" class="nav-link">
+  202007
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分类" class="dropdown-title"><span class="title">技术分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分类" class="mobile-dropdown-title"><span class="title">技术分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/szxblog-demo/tech/js/" class="nav-link router-link-active">
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/szxblog-demo/tech/css/" class="nav-link">
+  css
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用站点" class="dropdown-title"><span class="title">常用站点</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用站点" class="mobile-dropdown-title"><span class="title">常用站点</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://wubaiqing.github.io/zaobao/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  每日时报
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术趋势
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端日报" class="dropdown-title"><span class="title">前端日报</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端日报" class="mobile-dropdown-title"><span class="title">前端日报</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/szxblog-demo/dailyFrontReport/2020/06/" class="nav-link">
+  202006
+</a></li><li class="dropdown-item"><!----> <a href="/szxblog-demo/dailyFrontReport/2020/07/" class="nav-link">
+  202007
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分类" class="dropdown-title"><span class="title">技术分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分类" class="mobile-dropdown-title"><span class="title">技术分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/szxblog-demo/tech/js/" class="nav-link router-link-active">
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/szxblog-demo/tech/css/" class="nav-link">
+  css
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用站点" class="dropdown-title"><span class="title">常用站点</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用站点" class="mobile-dropdown-title"><span class="title">常用站点</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://wubaiqing.github.io/zaobao/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  每日时报
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术趋势
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>常用string处理</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="常用string处理"><a href="#常用string处理" class="header-anchor">#</a> 常用string处理</h1> <p>引（从右到左搜索），如果没有匹配项，返回 -1 。
+var index1 = lastIndexOf('l');
+//index1 = 3
+var index2 = lastIndexOf('l',2)
+//index2 = 2
+match
+检查一个字符串匹配一个正则表达式内容，如果么有匹配返回 null。
+var re = new RegExp(/^\w+$/);
+var is_alpha1 = a.match(re);
+//is_alpha1 = &quot;hello&quot;
+var is_alpha2 = b.match(re);
+//is_alpha2 = null
+substring
+返回字符串的一个子串，传入参数是起始位置和结束位置。
+var sub_string1 = a.substring(1);
+//sub_string1 = &quot;ello&quot;
+var sub_string2 = a.substring(1,4);
+//sub_string2 = &quot;ell&quot;
+substr
+返回字符串的一个子串，传入参数是起始位置和长度
+var sub_string1 = a.substr(1);
+//sub_string1 = &quot;ello&quot;
+var sub_string2 = a.substr(1,4);
+//sub_string2 = &quot;ello&quot;
+replace
+用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。
+var result1 = a.replace(re,&quot;Hello&quot;);
+//result1 = &quot;Hello&quot;
+var result2 = b.replace(re,&quot;Hello&quot;);
+//result2 = &quot;,world&quot;
+search
+执行一个正则表达式匹配查找。如果查找成功，返回字符串中匹配的索引值。否则返回 -1 。
+var index1 = a.search(re);
+//index1 = 0
+var index2 = b.search(re);
+//index2 = -1
+slice
+提取字符串的一部分，并返回一个新字符串（与 substring 相同）。
+var sub_string1 = a.slice(1);
+//sub_string1 = &quot;ello&quot;
+var sub_string2 = a.slice(1,4);
+//sub_string2 = &quot;ell&quot;
+split
+通过将字符串划分成子串，将一个字符串做成一个字符串数组。
+var arr1 = a.split(&quot;&quot;);
+//arr1 = [h,e,l,l,o]
+length
+返回字符串的长度，所谓字符串的长度是指其包含的字符的个数。
+var len = a.length();
+//len = 5
+toLowerCase
+将整个字符串转成小写字母。
+var lower_string = a.toLowerCase();
+//lower_string = &quot;hello&quot;
+toUpperCase
+将整个字符串转成大写字母。
+var upper_string = a.toUpperCase();
+//upper_string = &quot;HELLO&quot;</p> <p>/*</p> <hr> <p>字符串函数扩充</p> <hr> <p>*/</p> <h1 id=""><a href="#" class="header-anchor">#</a> /*</h1> <h1 id="去除左边的空格"><a href="#去除左边的空格" class="header-anchor">#</a> //去除左边的空格</h1> <p><em>/
+String.prototype.LTrim = function()
+{
+return this.replace(/(^\s</em>)/g, &quot;&quot;);
+}</p> <h1 id="-2"><a href="#-2" class="header-anchor">#</a> /*</h1> <h1 id="去除右边的空格"><a href="#去除右边的空格" class="header-anchor">#</a> //去除右边的空格</h1> <p><em>/
+String.prototype.Rtrim = function()
+{
+return this.replace(/(\s</em>$)/g, &quot;&quot;);
+}</p> <h1 id="-3"><a href="#-3" class="header-anchor">#</a> /*</h1> <h1 id="去除前后空格"><a href="#去除前后空格" class="header-anchor">#</a> //去除前后空格</h1> <p><em>/
+String.prototype.Trim = function()
+{
+return this.replace(/(^\s</em>)|(\s*$)/g, &quot;&quot;);
+}</p> <h1 id="-4"><a href="#-4" class="header-anchor">#</a> /*</h1> <h1 id="得到左边的字符串"><a href="#得到左边的字符串" class="header-anchor">#</a> //得到左边的字符串</h1> <p>*/
+String.prototype.Left = function(len)
+{</p> <p>if(isNaN(len)||len==null)
+{
+len = this.length;
+}
+else
+{
+if(parseInt(len)&lt;0||parseInt(len)&gt;this.length)
+{
+len = this.length;
+}
+}</p> <p>return this.substr(0,len);
+}</p> <h1 id="-5"><a href="#-5" class="header-anchor">#</a> /*</h1> <h1 id="得到右边的字符串"><a href="#得到右边的字符串" class="header-anchor">#</a> //得到右边的字符串</h1> <p>*/
+String.prototype.Right = function(len)
+{</p> <p>if(isNaN(len)||len==null)
+{
+len = this.length;
+}
+else
+{
+if(parseInt(len)&lt;0||parseInt(len)&gt;this.length)
+{
+len = this.length;
+}
+}</p> <p>return this.substring(this.length-len,this.length);
+}</p> <h1 id="-6"><a href="#-6" class="header-anchor">#</a> /*</h1> <h1 id="得到中间的字符串-注意从0开始"><a href="#得到中间的字符串-注意从0开始" class="header-anchor">#</a> //得到中间的字符串,注意从0开始</h1> <p>*/
+String.prototype.Mid = function(start,len)
+{
+return this.substr(start,len);
+}</p> <h1 id="-7"><a href="#-7" class="header-anchor">#</a> /*</h1> <h1 id="在字符串里查找另一字符串-位置从0开始"><a href="#在字符串里查找另一字符串-位置从0开始" class="header-anchor">#</a> //在字符串里查找另一字符串:位置从0开始</h1> <p>*/
+String.prototype.InStr = function(str)
+{</p> <p>if(str==null)
+{
+str = &quot;&quot;;
+}</p> <p>return this.indexOf(str);
+}</p> <h1 id="-8"><a href="#-8" class="header-anchor">#</a> /*</h1> <h1 id="在字符串里反向查找另一字符串-位置0开始"><a href="#在字符串里反向查找另一字符串-位置0开始" class="header-anchor">#</a> //在字符串里反向查找另一字符串:位置0开始</h1> <p>*/
+String.prototype.InStrRev = function(str)
+{</p> <p>if(str==null)
+{
+str = &quot;&quot;;
+}</p> <p>return this.lastIndexOf(str);
+}</p> <h1 id="-9"><a href="#-9" class="header-anchor">#</a> /*</h1> <h1 id="计算字符串打印长度"><a href="#计算字符串打印长度" class="header-anchor">#</a> //计算字符串打印长度</h1> <p>*/
+String.prototype.LengthW = function()
+{
+return this.replace(/[^\x00-\xff]/g,&quot;**&quot;).length;
+}</p> <h1 id="-10"><a href="#-10" class="header-anchor">#</a> /*</h1> <h1 id="是否是正确的ip地址"><a href="#是否是正确的ip地址" class="header-anchor">#</a> //是否是正确的IP地址</h1> <p>*/
+String.prototype.isIP = function()
+{</p> <p>var reSpaceCheck = /^(\d+).(\d+).(\d+).(\d+)$/;</p> <p>if (reSpaceCheck.test(this))
+{
+this.match(reSpaceCheck);
+if (RegExp.$1 &lt;= 255 &amp;&amp; RegExp.$1 &gt;= 0
+&amp;&amp; RegExp.$2 &lt;= 255 &amp;&amp; RegExp.$2 &gt;= 0
+&amp;&amp; RegExp.$3 &lt;= 255 &amp;&amp; RegExp.$3 &gt;= 0
+&amp;&amp; RegExp.$4 &lt;= 255 &amp;&amp; RegExp.$4 &gt;= 0)
+{
+return true;<br>
+}
+else
+{
+return false;
+}
+}
+else
+{
+return false;
+}</p> <p>}</p> <h1 id="-11"><a href="#-11" class="header-anchor">#</a> /*</h1> <h1 id="是否是正确的长日期"><a href="#是否是正确的长日期" class="header-anchor">#</a> //是否是正确的长日期</h1> <p><em>/
+String.prototype.isLongDate = function()
+{
+var r = this.replace(/(^\s</em>)|(\s*$)/g, &quot;&quot;).match(/^(\d{1,4})(-|/)(\d{1,2})\2(\d{1,2}) (\d{1,2})😦\d{1,2})😦\d{1,2})$/);
+if(r==null)
+{
+return false;
+}
+var d = new Date(r[1], r[3]-1,r[4],r[5],r[6],r[7]);
+return (d.getFullYear()==r[1]&amp;&amp;(d.getMonth()+1)==r[3]&amp;&amp;d.getDate()==r[4]&amp;&amp;d.getHours()==r[5]&amp;&amp;d.getMinutes()==r[6]&amp;&amp;d.getSeconds()==r[7]);</p> <p>}</p> <h1 id="-12"><a href="#-12" class="header-anchor">#</a> /*</h1> <h1 id="是否是正确的短日期"><a href="#是否是正确的短日期" class="header-anchor">#</a> //是否是正确的短日期</h1> <p><em>/
+String.prototype.isShortDate = function()
+{
+var r = this.replace(/(^\s</em>)|(\s*$)/g, &quot;&quot;).match(/^(\d{1,4})(-|/)(\d{1,2})\2(\d{1,2})$/);
+if(r==null)
+{
+return false;
+}
+var d = new Date(r[1], r[3]-1, r[4]);
+return (d.getFullYear()==r[1]&amp;&amp;(d.getMonth()+1)==r[3]&amp;&amp;d.getDate()==r[4]);
+}</p> <h1 id="-13"><a href="#-13" class="header-anchor">#</a> /*</h1> <h1 id="是否是正确的日期"><a href="#是否是正确的日期" class="header-anchor">#</a> //是否是正确的日期</h1> <p>*/
+String.prototype.isDate = function()
+{
+return this.isLongDate()||this.isShortDate();
+}</p> <h1 id="-14"><a href="#-14" class="header-anchor">#</a> /*</h1> <h1 id="是否是手机"><a href="#是否是手机" class="header-anchor">#</a> //是否是手机</h1> <p>*/
+String.prototype.isMobile = function()
+{
+return /^0{0,1}13[0-9]{9}$/.test(this);
+}</p> <h1 id="-15"><a href="#-15" class="header-anchor">#</a> /*</h1> <h1 id="是否是邮件"><a href="#是否是邮件" class="header-anchor">#</a> //是否是邮件</h1> <p><em>/
+String.prototype.isEmail = function()
+{
+return /^\w+((-\w+)|(.\w+))</em>@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+)*.[A-Za-z0-9]+$/.test(this);
+}</p> <h1 id="-16"><a href="#-16" class="header-anchor">#</a> /*</h1> <h1 id="是否是邮编-中国"><a href="#是否是邮编-中国" class="header-anchor">#</a> //是否是邮编(中国)</h1> <p>*/</p> <p>String.prototype.isZipCode = function()
+{
+return /^[\d]{6}$/.test(this);
+}</p> <h1 id="-17"><a href="#-17" class="header-anchor">#</a> /*</h1> <h1 id="是否是有汉字"><a href="#是否是有汉字" class="header-anchor">#</a> //是否是有汉字</h1> <p><em>/
+String.prototype.existChinese = function()
+{
+//[\u4E00-\u9FA5]為漢字﹐[\uFE30-\uFFA0]為全角符號
+return /^[\x00-\xff]</em>$/.test(this);
+}</p> <h1 id="-18"><a href="#-18" class="header-anchor">#</a> /*</h1> <h1 id="是否是合法的文件名-目录名"><a href="#是否是合法的文件名-目录名" class="header-anchor">#</a> //是否是合法的文件名/目录名</h1> <p>*/
+String.prototype.isFileName = function()
+{
+return !/[\/*?|:&quot;&lt;&gt;]/g.test(this);
+}</p> <h1 id="-19"><a href="#-19" class="header-anchor">#</a> /*</h1> <h1 id="是否是有效链接"><a href="#是否是有效链接" class="header-anchor">#</a> //是否是有效链接</h1> <p><em>/
+String.prototype.isUrl = function()
+{
+return /^http[s]?😕/([\w-]+.)+[\w-]+([\w-./?%&amp;=]</em>)?$/i.test(this);
+}</p> <h1 id="-20"><a href="#-20" class="header-anchor">#</a> /*</h1> <h1 id="是否是有效的身份证-中国"><a href="#是否是有效的身份证-中国" class="header-anchor">#</a> //是否是有效的身份证(中国)</h1> <p>*/
+String.prototype.isIDCard = function()
+{
+var iSum=0;
+var info=&quot;&quot;;
+var sId = this;</p> <p>var aCity={11:&quot;北京&quot;,12:&quot;天津&quot;,13:&quot;河北&quot;,14:&quot;山西&quot;,15:&quot;内蒙古&quot;,21:&quot;辽宁&quot;,22:&quot;吉林&quot;,23:&quot;黑龙 江&quot;,31:&quot;上海&quot;,32:&quot;江苏&quot;,33:&quot;浙江&quot;,34:&quot;安徽&quot;,35:&quot;福建&quot;,36:&quot;江西&quot;,37:&quot;山东&quot;,41:&quot;河南&quot;,42:&quot;湖 北&quot;,43:&quot;湖南&quot;,44:&quot;广东&quot;,45:&quot;广西&quot;,46:&quot;海南&quot;,50:&quot;重庆&quot;,51:&quot;四川&quot;,52:&quot;贵州&quot;,53:&quot;云南&quot;,54:&quot;西藏&quot;,61:&quot;陕西&quot;,62:&quot;甘肃&quot;,63:&quot;青海&quot;,64:&quot;宁夏&quot;,65:&quot;新疆&quot;,71:&quot;台湾&quot;,81:&quot;香港&quot;,82:&quot;澳门&quot;,91:&quot;国外&quot;};</p> <p>if(!/^\d{17}(\d|x)$/i.test(sId))
+{
+return false;
+}
+sId=sId.replace(/x$/i,&quot;a&quot;);
+//非法地区
+if(aCity[parseInt(sId.substr(0,2))]==null)
+{
+return false;
+}</p> <p>var sBirthday=sId.substr(6,4)+&quot;-&quot;+Number(sId.substr(10,2))+&quot;-&quot;+Number(sId.substr(12,2));</p> <p>var d=new Date(sBirthday.replace(/-/g,&quot;/&quot;))</p> <p>//非法生日
+if(sBirthday!=(d.getFullYear()+&quot;-&quot;+ (d.getMonth()+1) + &quot;-&quot; + d.getDate()))
+{
+return false;
+}
+for(var i = 17;i&gt;=0;i--)
+{
+iSum += (Math.pow(2,i) % 11) * parseInt(sId.charAt(17 - i),11);
+}</p> <p>if(iSum%11!=1)
+{
+return false;
+}
+return true;</p> <p>}</p> <h1 id="-21"><a href="#-21" class="header-anchor">#</a> /*</h1> <h1 id="是否是有效的电话号码-中国"><a href="#是否是有效的电话号码-中国" class="header-anchor">#</a> //是否是有效的电话号码(中国)</h1> <p>*/
+String.prototype.isPhoneCall = function()
+{
+return /(^[0-9]{3,4}-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^([0-9]{3,4})[0-9]{3,8}$)|(^0{0,1}13[0-9]{9}$)/.test(this);
+}</p> <h1 id="-22"><a href="#-22" class="header-anchor">#</a> /*</h1> <h1 id="是否是数字"><a href="#是否是数字" class="header-anchor">#</a> //是否是数字</h1> <p>*/
+String.prototype.isNumeric = function(flag)
+{
+//验证是否是数字
+if(isNaN(this))
+{</p> <p>return false;
+}</p> <p>switch(flag)
+{</p> <p>case null:        //数字
+case &quot;&quot;:
+return true;
+case &quot;+&quot;:        //正数
+return                /(^+?|^\d?)\d*.?\d+$/.test(this);
+case &quot;-&quot;:        //负数
+return                /^-\d*.?\d+$/.test(this);
+case &quot;i&quot;:        //整数
+return                /(^-?|^+?|\d)\d+$/.test(this);
+case &quot;+i&quot;:        //正整数
+return                /(^\d+$)|(^+?\d+$)/.test(this);<br>
+case &quot;-i&quot;:        //负整数
+return                /^[-]\d+$/.test(this);
+case &quot;f&quot;:        //浮点数
+return                /(^-?|^+?|^\d?)\d*.\d+$/.test(this);
+case &quot;+f&quot;:        //正浮点数
+return                /(^+?|^\d?)\d*.\d+$/.test(this);<br>
+case &quot;-f&quot;:        //负浮点数
+return                /^[-]\d*.\d$/.test(this);<br>
+default:        //缺省
+return true;<br>
+}
+}</p> <h1 id="-23"><a href="#-23" class="header-anchor">#</a> /*</h1> <h1 id="是否是颜色-ffffff形式"><a href="#是否是颜色-ffffff形式" class="header-anchor">#</a> //是否是颜色(#FFFFFF形式)</h1> <p>*/
+String.prototype.IsColor = function()
+{
+var temp        = this;
+if (temp==&quot;&quot;) return true;
+if (temp.length!=7) return false;
+return (temp.search(/#[a-fA-F0-9]{6}/) != -1);
+}</p> <h1 id="-24"><a href="#-24" class="header-anchor">#</a> /*</h1> <h1 id="转换成全角"><a href="#转换成全角" class="header-anchor">#</a> //转换成全角</h1> <p>*/
+String.prototype.toCase = function()
+{
+var tmp = &quot;&quot;;
+for(var i=0;i&lt;this.length;i++)
+{
+if(this.charCodeAt(i)&gt;0&amp;&amp;this.charCodeAt(i)&lt;255)
+{
+tmp += String.fromCharCode(this.charCodeAt(i)+65248);
+}
+else
+{
+tmp += String.fromCharCode(this.charCodeAt(i));
+}
+}
+return tmp
+}</p> <h1 id="-25"><a href="#-25" class="header-anchor">#</a> /*</h1> <h1 id="对字符串进行html编码"><a href="#对字符串进行html编码" class="header-anchor">#</a> //对字符串进行Html编码</h1> <p>*/
+String.prototype.toHtmlEncode = function()
+{
+var str = this;</p> <p>str=str.replace(/&amp;/g,&quot;&amp;&quot;);
+str=str.replace(/&lt;/g,&quot;&lt;&quot;);
+str=str.replace(/&gt;/g,&quot;&gt;&quot;);
+str=str.replace(/'/g,&quot;'&quot;);
+str=str.replace(/&quot;/g,&quot;&quot;&quot;);
+str=str.replace(/\n/g,&quot;<br>&quot;);
+str=str.replace(/\ /g,&quot; &quot;);
+str=str.replace(/\t/g,&quot;    &quot;);</p> <p>return str;
+}</p> <h1 id="-26"><a href="#-26" class="header-anchor">#</a> /*</h1> <h1 id="转换成日期"><a href="#转换成日期" class="header-anchor">#</a> //转换成日期</h1> <p>*/
+String.prototype.toDate = function()
+{
+try
+{
+return new Date(this.replace(/-/g, &quot;/&quot;));
+}
+catch(e)
+{
+return null;
+}
+}</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">11/17/2020, 9:33:55 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/szxblog-demo/assets/js/app.e2c00437.js" defer></script><script src="/szxblog-demo/assets/js/2.8f1423a4.js" defer></script><script src="/szxblog-demo/assets/js/121.46cb657a.js" defer></script>
+  </body>
+</html>
